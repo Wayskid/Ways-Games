@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+:root{
+    --clr-neutral-100: #ffffff;
+    --clr-primary-200: #d71b3b;
+    --clr-primary-300: #ffea04;
+    --clr-primary-400: #d13ca4;
+    --clr-primary-800: #0d1137;
+    --clr-neutral-900: #000000;
+
+    --fs-vSmall-100: 12px;
+    --fs-small-400: 18px;
+    --fs-medium-500: 25px;
+    --fs-big-600: 30px;
+    --fs-vBig-900: 50px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--clr-primary-200);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.containerBody.hideGame{
+    opacity: 0;
+    z-index: 1;
+}
+
+
+.gameName{
+    color: var(--clr-primary-800);
+    margin-bottom: 2rem;
+}
+
+.topPart{
+    display: grid;
+    margin: 4rem auto 1rem auto;
+    gap: 2rem;
+    transition: 0.5s ease;
+}
+
+.hiddenNumber{
+    background-color: var(--clr-primary-800);
+    color: var(--clr-primary-400);
+    display: grid;
+    width: min-content;
+    margin-inline: auto;
+    grid-template-areas: "stack";
+    padding: 2rem 3rem;
+    font-size: var(--fs-vBig-900);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tryCorrect{
+    font-size: var(--fs-small-400);
+    color: var(--clr-primary-300);
+    transition: 1s ease;
+}
+
+.hiddenNumber>*{
+    grid-area: stack;
+}
+
+.blink{
+    animation: blink 0.5s infinite;
+}
+
+@keyframes blink{
+    from{
+    }
+    to{
+        transform: scale(1.5);
+        color: var(--clr-primary-200);
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.centreBorder{
+    height: 0.5rem;
+    background-color: var(--clr-primary-800);
+}
+
+.bottomPart{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem 1rem;
+    gap: 3rem;
+}
+
+.leftSide, .rightSide{
+    display: grid;
+    gap: 5rem;
+}
+
+.highScore p{
+    color: var(--clr-primary-800);
+    font-weight: 600;
+    font-size: var(--fs-small-400);
+}
+
+.scoreHeader{
+    font-size: var(--fs-small-400);
+    color: var(--clr-primary-800);
+    font-weight: 600;
+}
+
+.yScore, .playerName{
+    font-weight: 600;
+    color: var(--clr-primary-300);
+}
+
+.restart{
+    background-color: var(--clr-primary-800);
+    color: var(--clr-primary-200);
+    cursor: pointer;
+    padding-block: 0.5rem;
+    border-radius: 2px;
+    height: min-content;
+    width: 4rem;
+    margin-inline: auto;
+    font-size: var(--fs-small-400);
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 1000;
+}
+
+.middle{
+    align-self: center;
+    display: grid;
+    gap: 1rem;
+}
+
+.numberInput{
+    font-size: var(--fs-big-600);
+    font-weight: 900;
+    color: var(--clr-primary-400);
+    text-align: center;
+    padding-block: 0.5rem;
+    width: 5rem;
+    justify-self: center;
+    border: 3px solid var(--clr-primary-800);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.numberInput:focus{
+    border: 3px solid var(--clr-primary-300);
+    outline: none;
+}
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
+    display: none;
+}
+
+.inputBtn{
+    background-color: var(--clr-primary-800);
+    padding-block: 0.5rem;
+    border: none;
+    border-radius: 2px;
+    color: var(--clr-primary-400);
+    width: 4rem;
+    margin-inline: auto;
+    font-size: var(--fs-small-400);
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.popupStart{
+    border: 2px solid var(--clr-primary-800);
+    background-color: var(--clr-primary-200);
+    color: var(--clr-primary-300);
+    width: 95%;
+    display: grid;
+    gap: 0.5rem;
+    margin-inline: auto;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    /* right: 40%; */
+    transform: translate(-50%);
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.popupStart.closePopup{
+    display: none;
+}
+
+.instruction{
+    width: 70%;
+    margin-inline: auto;
+}
+
+.instruction span{
+    font-size: var(--fs-big-600);
+    font-weight: 600;
+}
+
+.inputName{
+    font-size: var(--fs-big-600);
+    font-weight: 400;
+    color: var(--clr-primary-400);
+    text-align: center;
+    padding-block: 0.5rem;
+    width: 50%;
+    justify-self: center;
+    border: 3px solid var(--clr-primary-800);
+}
+
+.nameBtn.disable{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+#my-canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+.hideConfetti{
+    display: none;
+}
+
+
+@media(min-width: 720px){
+    .gameName{
+        font-size: var(--fs-vBig-900);
+        margin-bottom: 5rem;
+    }
+
+    .tryCorrect{
+        font-size: var(--fs-big-600);
+    }
+
+    .yScore, .playerName{
+        font-size: var(--fs-medium-500);
+        font-weight: 700;
+    }
+
+    .popupStart{
+        width: 50%;
+        margin-top: 3rem;
+    }
+}
+

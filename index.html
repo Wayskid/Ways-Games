@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ways Games</title>
+</head>
+<body>
+    <div class="containerBody hideGame">
+        <h1 class="gameName">Guess The Number</h1>
+        <div class="topPart">
+            <div class="hiddenNumber">
+                <p class="qstMark">?</p>
+                <p class="theNumber hidden">20</p>
+            </div>
+            <div class="tryCorrect"><span class="highLow"></span> <span class="tryAgain"></span></div>
+        </div>
+        <div class="centreBorder"></div>
+        <div class="bottomPart">
+            <div class="leftSide">
+                <div class="playerName">Ritchie</div>
+                <button class="restart">Restart</button>
+            </div>
+            <div class="middle">
+                <input type="number" max="20" class="numberInput">
+                <input type="submit" value="Enter" class="inputBtn enterNumber">
+            </div>
+            <div class="rightSide">
+                <div class="yourScore">
+                    <p class="scoreHeader">Your Score:</p>
+                    <p class="yScore">20</p>
+                </div>
+                <div class="highScore">
+                    <p>High Score:</p>
+                    <p class="hScore">20</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popupStart">
+        <p class="instruction"><span>Welcome</span> <br> Ways Guess The Number game is won by guessing correctly the hidden number in the mystery box. Hidden number is between 1 and 20. Goodluck! <br> <strong>Enter Your Name To Start</strong></p>
+        <input type="text" class="inputName">
+        <button class="inputBtn nameBtn disable">START</button>
+    </div>
+
+    <canvas id="my-canvas" class="hideConfetti"></canvas>
+
+    <script src="index.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
