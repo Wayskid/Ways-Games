@@ -22,7 +22,8 @@ const winConfetti = document.querySelector("#my-canvas");
 
 
 inputName.addEventListener("keyup", () => {
-    if (inputName.value.length > 1) {
+    inputTrimmed = inputName.value.trim();
+    if (inputTrimmed.length > 1) {
         nameBtn.classList.remove("disable");
 
         nameBtn.addEventListener("click", (e) => {
@@ -31,6 +32,9 @@ inputName.addEventListener("keyup", () => {
                 popupStart.classList.add("closePopup")
                 playerName.innerText = inputName.value;
         })
+    }
+    else{
+        nameBtn.classList.add("disable");
     }
 });
 
