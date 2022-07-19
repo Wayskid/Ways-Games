@@ -15,6 +15,7 @@ const highLow = document.querySelector(".highLow");
 const restart = document.querySelector(".restart");
 const tryAgain = document.querySelector(".tryAgain");
 const winConfetti = document.querySelector("#my-canvas");
+const formInput = document.querySelector("form");
 
 
 
@@ -26,7 +27,7 @@ inputName.addEventListener("keyup", () => {
     if (inputTrimmed.length > 1) {
         nameBtn.classList.remove("disable");
 
-        nameBtn.addEventListener("click", (e) => {
+        formInput.addEventListener("submit", (e) => {
                 e.preventDefault();
                 containerBody.classList.remove("hideGame");
                 popupStart.classList.add("closePopup")
@@ -44,9 +45,6 @@ inputName.addEventListener("keyup", () => {
     let randomNum = Math.floor((Math.random() * 20)) + 1;
     theNumber.innerText = randomNum;
     let hiddenNum = parseFloat(theNumber.innerText);
-
-// const myScore = parseFloat(yScore.innerText);
-// const myScoreShown = myScore - 1;
 
 
 enterNumber.addEventListener("click", (e) => {

@@ -191,7 +191,6 @@ body{
     position: absolute;
     top: 25%;
     left: 50%;
-    /* right: 40%; */
     transform: translate(-50%);
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -202,7 +201,7 @@ body{
 }
 
 .instruction{
-    width: 70%;
+    width: 80%;
     margin-inline: auto;
 }
 
@@ -220,6 +219,11 @@ body{
     width: 50%;
     justify-self: center;
     border: 3px solid var(--clr-primary-800);
+}
+
+form{
+    display: grid;
+    gap: 0.5rem;
 }
 
 .nameBtn.disable{
